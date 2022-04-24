@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  global:
+    build: .
+    restart: unless-stopped
+    environment:
+      - POINTS_PER_DURATION=45
+      - SECONDS_DURATION=1
+      - REDIS_CHANNEL=global.ratelimits
+    env_file:
+      - .env
+
+  identify:
+    build: .
+    restart: unless-stopped
+    environment:
+      - POINTS_PER_DURATION=1
+      - SECONDS_DURATION=6
+      - REDIS_CHANNEL=identify.ratelimits
+    env_file:
+      - .env

@@ -1,0 +1,19 @@
+{
+  "name": "ria",
+  "version": "1.0.0",
+  "description": "The rate-limiter service of Mana which uses Redis Pubsub and node-rate-limiter-flexible.",
+  "main": "index.js",
+  "scripts": {
+    "serve": "ts-node ./src/index.ts"
+  },
+  "author": "shindoumihou",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "rate-limiter-flexible": "^2.3.6",
+    "redis": "^4.0.6",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3",
+    "winston": "^3.7.2"
+  }
+}
